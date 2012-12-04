@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nazwa:</b>
+  <%= @list.nazwa %>
+</p>
+
+<p>
+  <b>Pochodzenie:</b>
+  <%= @list.pochodzenie %>
+</p>
+
+<p>
+  <b>Gatunek:</b>
+  <%= @list.gatunek %>
+</p>
+
+<p>
+  <b>Rok:</b>
+  <%= @list.rok %>
+</p>
+
+
+<%= link_to 'Edit', edit_list_path(@list) %> |
+<%= link_to 'Back', lists_path %>
