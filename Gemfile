@@ -6,8 +6,8 @@ gem 'omniauth-facebook'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-# gem 'sqlite3', group: :development
-gem 'pg', group: :production
+gem 'sqlite3', '~> 1.3.6',  :groups => [:test, :development]
+gem 'pg', '~> 0.14.1',      :groups => :production
 
 
 # Gems used only for assets and not required
