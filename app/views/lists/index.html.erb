@@ -1,0 +1,37 @@
+<h1>Zespoły</h1>
+
+<div class="szukajka"> 
+	Wyszukaj zespół: <br />
+	<%= form_tag lists_path, :method =>'get',id: "lists_search", class: "form-inline"  do %>
+		<%= text_field_tag :nazwa, params[:nazwa] %>
+		<%= submit_tag "Szukaj", :name => nil %>
+	<% end %>
+</div>
+
+<table>
+  <tr>
+    <th>Nazwa</th>
+    <th>Pochodzenie</th>
+    <th>Gatunek</th>
+    <th>Rok</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @lists.each do |list| %>
+  <tr>
+    <td><%= list.nazwa %></td>
+    <td><%= list.pochodzenie %></td>
+    <td><%= list.gatunek %></td>
+    <td><%= list.rok %></td>
+    <td><%= link_to 'Show', list %></td>
+    <td><%= link_to 'Edit', edit_list_path(list) %></td>
+    <td><%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New List', new_list_path %>

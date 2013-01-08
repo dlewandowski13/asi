@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nazwa: MyString
+  pochodzenie: MyString
+  gatunek: MyString
+  rok: 1
+
+two:
+  nazwa: MyString
+  pochodzenie: MyString
+  gatunek: MyString
+  rok: 1
